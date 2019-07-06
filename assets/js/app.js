@@ -1,14 +1,14 @@
 $(document).ready(function () {
  // initialize firebase
  var config = {
-    apiKey: "AIzaSyCo4jS1IXc0nCsd7Ue5YiRfqsSAPjkj5zk",
-    authDomain: "new-underground.firebaseapp.com",
-    databaseURL: "https://new-underground.firebaseio.com",
-    projectId: "new-underground",
-    storageBucket: "",
-    messagingSenderId: "958607761213",
-    appId: "1:958607761213:web:b1f31c014027c254"
-  };
+  apiKey: "AIzaSyCo4jS1IXc0nCsd7Ue5YiRfqsSAPjkj5zk",
+  authDomain: "new-underground.firebaseapp.com",
+  databaseURL: "https://new-underground.firebaseio.com",
+  projectId: "new-underground",
+  storageBucket: "new-underground.appspot.com",
+  messagingSenderId: "958607761213",
+  appId: "1:958607761213:web:b1f31c014027c254"
+};
  // Initialize Firebase
 firebase.initializeApp(config);
 
@@ -28,8 +28,8 @@ $("#trainInfoBtn").on("click", function(event) {
 
   var frequency = $("#freq").val().trim();
   
-  //current time
-  var currentTime = moment();
+  //current time keep getting erro saying moment not defined
+  var currentTime = moment("mm");
   console.log("CURRENT TIME: " +  moment(currentTime).format("hh:mm"));
 
   console.log(trainName);
